@@ -1,0 +1,440 @@
+/* Anime Page Specific Styles */
+.category-page {
+    background: linear-gradient(to bottom, #000 0%, #1a0a1a 100%);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(106, 13, 173, 0.2);
+}
+
+.category-page h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.category-page h1 span {
+    color: #b19cd9;
+}
+
+.description {
+    color: #d0c0e8;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.streaming-section h2 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #b19cd9;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.platforms-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.platform-card {
+    background: rgba(26, 10, 26, 0.7);
+    border: 1px solid rgba(177, 156, 217, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(106, 13, 173, 0.3);
+    border-color: rgba(177, 156, 217, 0.5);
+}
+
+.platform-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(177, 156, 217, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.platform-info h3 {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.platform-info p {
+    color: #d0c0e8;
+    font-size: 0.9rem;
+}
+
+/* Platform Specific Icon Colors */
+.crunchyroll .platform-icon {
+    color: #f47521;
+}
+.crunchyroll:hover .platform-icon {
+    background: #f47521;
+    color: white;
+}
+
+.aniwatch .platform-icon {
+    color: #6e45e2;
+}
+.aniwatch:hover .platform-icon {
+    background: #6e45e2;
+    color: white;
+}
+
+.animeplanet .platform-icon {
+    color: #1cb5e0;
+}
+.animeplanet:hover .platform-icon {
+    background: #1cb5e0;
+    color: white;
+}
+
+.animekai .platform-icon {
+    color: #8e2de2;
+}
+.animekai:hover .platform-icon {
+    background: #8e2de2;
+    color: white;
+}
+
+.prime .platform-icon {
+    color: #00a8e1;
+}
+.prime:hover .platform-icon {
+    background: #00a8e1;
+    color: white;
+}
+
+.netflix .platform-icon {
+    color: #e50914;
+}
+.netflix:hover .platform-icon {
+    background: #e50914;
+    color: white;
+}
+
+.netmirror .platform-icon {
+    color: #b19cd9;
+}
+.netmirror:hover .platform-icon {
+    background: #b19cd9;
+    color: #1a0a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-page {
+        padding: 30px;
+    }
+    
+    .category-page h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-page {
+        padding: 20px;
+    }
+    
+    .platform-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .platform-icon {
+        margin-bottom: 15px;
+    }
+}
+/* Netflix Animated Icon */
+.netflix-animated {
+    position: relative;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: white;
+}
+
+.netflix-animated span {
+    position: relative;
+    z-index: 2;
+}
+
+.red-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e50914;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.platform-card.netflix:hover .red-overlay {
+    width: 100%;
+}
+
+/* Keep all other existing styles from previous code */
+/* (All the platform colors, hover effects, grid layout etc.) */
+
+/* Remove white background and reset spacing */
+body {
+    margin: 0;
+    padding: 0;
+    background: #000; /* Pure black background */
+    min-height: 100vh;
+}
+
+/* Keep all other existing styles exactly the same */
+.category-page {
+    background: linear-gradient(to bottom, #000 0%, #1a0a1a 100%);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(106, 13, 173, 0.2);
+    margin: 0 auto; /* Changed from margin: 40px 0 */
+    max-width: 10900px;
+}
+
+/* Rest of your existing CSS remains untouched */
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.footer {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.footer-contact,
+.footer-credits {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-contact h4,
+.footer-credits h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #555;
+  padding-bottom: 4px;
+}
+
+.footer-divider {
+  width: 10px;
+  background-color: #444;
+  height: 100%;
+  min-height: 100px;
+  border-radius: 3px;
+  align-self: stretch;
+}
+
+.footer-contact p,
+.footer-credits p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+/* Back Button - Matches Movies Page Style */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #b19cd9;
+    text-decoration: none;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(177, 156, 217, 0.1);
+    border: 1px solid rgba(177, 156, 217, 0.3);
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+.back-btn:hover {
+    color: #9b84c7;
+    transform: translateX(-5px);
+    background: rgba(177, 156, 217, 0.2);
+}
+
+/* Keep all other existing CSS exactly the same */
+.category-page {
+    background: linear-gradient(to bottom, #000 0%, #1a0a1a 100%);
+    border-radius: 0px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(106, 13, 173, 0.2);
+}
+
+/* ... (rest of your existing CSS remains unchanged) ... */
+
+
+/* ... (all other existing styles remain exactly the same) ... */
+/* Updated Footer Styles for Anime Page */
+/* Footer Styles */
+.footer {
+    background: rgba(255, 255, 255, 0); /* Very light transparent white */
+    backdrop-filter: blur(10px); /* Creates a frosted glass effect */
+    border: 1px solid rgba(177, 156, 217, 0.1); /* Subtle border */
+    color: #f0f0f0;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.footer-contact,
+.footer-credits {
+    flex: 1;
+    min-width: 210px;
+}
+
+.footer-contact h4,
+.footer-credits h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(177, 156, 217, 0.3); /* Lighter border */
+    padding-bottom: 4px;
+    color: #b19cd9; /* Purple accent color */
+}
+
+.footer-divider {
+    width: 1px;
+    background-color: rgba(177, 156, 217, 0.384); /* Lighter divider */
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-contact p,
+.footer-credits p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    color: #d0c0e8; /* Light purple text */
+}
+
+.footer-contact a {
+    color: thistle;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #b19cd9;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 15px;
+    }
+    
+    .footer-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-divider {
+        width: 100%;
+        height: 1px;
+        min-height: 1px;
+    }
+}
+/* Updated Footer Styles */
+.footer {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(177, 156, 217, 0.1);
+    color: #f0f0f0;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align all text */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-credits {
+    width: 100%;
+}
+
+.footer-credits h4 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(177, 156, 217, 0.3);
+    padding-bottom: 8px;
+    color: #b19cd9;
+    display: inline-block;
+}
+
+.footer-credits p {
+    margin: 12px 0;
+    font-size: 0.95rem;
+    color: #d0c0e8;
+}
+
+/* Remove the divider and contact styles as they're no longer needed */
+.footer-divider {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 15px;
+    }
+}
