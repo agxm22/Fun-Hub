@@ -1,0 +1,60 @@
+/* Portraits Gallery Styles */
+/* Base Portrait Theme (Classic Gold) */
+.portrait-theme {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.portrait-theme i {
+    color: #d4af37;
+}
+
+.portrait-theme:hover {
+    background: rgba(212, 175, 55, 0.2);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Studio Portraits (Soft Ivory) */
+.studio-theme {
+    background: rgba(255, 253, 245, 0.1);
+    border: 1px solid rgba(255, 253, 245, 0.3);
+}
+
+.studio-theme i {
+    color: #fffdf5;
+}
+
+.studio-theme:hover {
+    background: rgba(255, 253, 245, 0.2);
+    box-shadow: 0 10px 20px rgba(255, 253, 245, 0.2);
+}
+
+/* Candid Portraits (Warm Amber) */
+.candid-theme {
+    background: rgba(255, 191, 0, 0.1);
+    border: 1px solid rgba(255, 191, 0, 0.3);
+}
+
+.candid-theme i {
+    color: #ffbf00;
+}
+
+.candid-theme:hover {
+    background: rgba(255, 191, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(255, 191, 0, 0.2);
+}
+
+/* Black & White (Monochrome) */
+.bw-theme {
+    background: rgba(125, 125, 125, 0.1);
+    border: 1px solid rgba(125, 125, 125, 0.3);
+}
+
+.bw-theme i {
+    color: #7d7d7d;
+}
+
+.bw-theme:hover {
+    background: rgba(125, 125, 125, 0.2);
+    box-shadow: 0 10px 20px rgba(125, 125, 125, 0.2);
+}
