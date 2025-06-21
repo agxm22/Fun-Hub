@@ -1,0 +1,60 @@
+/* Urban Gallery Styles */
+/* Base Urban Theme (Steel Blue) */
+.urban-theme {
+    background: rgba(70, 130, 180, 0.1);
+    border: 1px solid rgba(70, 130, 180, 0.3);
+}
+
+.urban-theme i {
+    color: #4682b4;
+}
+
+.urban-theme:hover {
+    background: rgba(70, 130, 180, 0.2);
+    box-shadow: 0 10px 20px rgba(70, 130, 180, 0.2);
+}
+
+/* Skyscrapers (Metallic Silver) */
+.skyscraper-theme {
+    background: rgba(192, 192, 192, 0.1);
+    border: 1px solid rgba(192, 192, 192, 0.3);
+}
+
+.skyscraper-theme i {
+    color: #c0c0c0;
+}
+
+.skyscraper-theme:hover {
+    background: rgba(192, 192, 192, 0.2);
+    box-shadow: 0 10px 20px rgba(192, 192, 192, 0.2);
+}
+
+/* City Lights (Electric Blue) */
+.citylights-theme {
+    background: rgba(30, 144, 255, 0.1);
+    border: 1px solid rgba(30, 144, 255, 0.3);
+}
+
+.citylights-theme i {
+    color: #1e90ff;
+}
+
+.citylights-theme:hover {
+    background: rgba(30, 144, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(30, 144, 255, 0.2);
+}
+
+/* Street Art (Graffiti Purple) */
+.streetart-theme {
+    background: rgba(147, 112, 219, 0.1);
+    border: 1px solid rgba(147, 112, 219, 0.3);
+}
+
+.streetart-theme i {
+    color: #9370db;
+}
+
+.streetart-theme:hover {
+    background: rgba(147, 112, 219, 0.2);
+    box-shadow: 0 10px 20px rgba(147, 112, 219, 0.2);
+}
