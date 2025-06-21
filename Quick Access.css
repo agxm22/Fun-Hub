@@ -1,0 +1,503 @@
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Category Page */
+.category-page {
+    background: linear-gradient(to bottom, #000 0%, #1a0a1a 100%);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(106, 13, 173, 0.2);
+}
+
+.category-page h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.category-page h1 span {
+    color: #b19cd9;
+}
+
+.description {
+    color: #d0c0e8;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.theme-text {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #b19cd9;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Platforms Grid */
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.platform-card {
+    background: rgba(26, 10, 26, 0.7);
+    border: 1px solid rgba(177, 156, 217, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(106, 13, 173, 0.3);
+    border-color: rgba(177, 156, 217, 0.5);
+}
+
+.platform-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(177, 156, 217, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.platform-info h3 {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.platform-info p {
+    color: #d0c0e8;
+    font-size: 0.9rem;
+}
+
+/* Platform Specific Styles */
+.microsoft .platform-icon { color: #0078d7; }
+.microsoft:hover .platform-icon { background: #0078d7; color: white; }
+
+.steam .platform-icon { color: #1b2838; }
+.steam:hover .platform-icon { background: #1b2838; color: white; }
+
+.epic .platform-icon { color: #2a2a2a; }
+.epic:hover .platform-icon { background: #2a2a2a; color: white; }
+
+.plarium .platform-icon { color: #00a3e0; }
+.plarium:hover .platform-icon { background: #00a3e0; color: white; }
+
+.fitgirl .platform-icon { color: #ff66aa; }
+.fitgirl:hover .platform-icon { background: #ff66aa; color: white; }
+
+.chess .platform-icon { color: #779556; }
+.chess:hover .platform-icon { 
+    background: #779556; 
+    color: white;
+    animation: chessMove 0.5s infinite alternate;
+}
+
+@keyframes chessMove {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-5px) rotate(10deg); }
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #b19cd9;
+    text-decoration: none;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(177, 156, 217, 0.1);
+    border: 1px solid rgba(177, 156, 217, 0.3);
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+.back-btn:hover {
+    color: #9b84c7;
+    transform: translateX(-5px);
+    background: rgba(177, 156, 217, 0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.footer-contact,
+.footer-credits {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-contact h4,
+.footer-credits h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 4px;
+}
+
+.footer-divider {
+    width: 1px;
+    background-color: #444;
+    height: 100%;
+    min-height: 100px;
+    border-radius: 3px;
+}
+
+.footer-contact p,
+.footer-credits p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-page {
+        padding: 30px;
+    }
+    .category-page h1 {
+        font-size: 2.5rem;
+    }
+    .platforms-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .category-page {
+        padding: 20px;
+    }
+    .platform-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .platform-icon {
+        margin-bottom: 15px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-divider {
+        width: 100%;
+        height: 1px;
+        min-height: 1px;
+    }
+}
+/* Crazy Games Platform Color */
+.crazygames .platform-icon {
+    color: #ff6b00;
+}
+.crazygames:hover .platform-icon {
+    background: #ff6b00;
+    color: white;
+    animation: crazyPulse 0.5s infinite alternate;
+}
+
+/* Poki Platform Color */
+.poki .platform-icon {
+    color: #3167ff;
+}
+.poki:hover .platform-icon {
+    background: #3167ff;
+    color: white;
+    animation: pokiBounce 0.5s infinite alternate;
+}
+
+@keyframes crazyPulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes pokiBounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+/* Music Platform Colors */
+.spotify .platform-icon {
+    color: #1DB954;
+}
+.spotify:hover .platform-icon {
+    background: #1DB954;
+    color: white;
+}
+
+.ytmusic .platform-icon {
+    color: #FF0000;
+}
+.ytmusic:hover .platform-icon {
+    background: #FF0000;
+    color: white;
+}
+
+.soundcloud .platform-icon {
+    color: #FF5500;
+}
+.soundcloud:hover .platform-icon {
+    background: #FF5500;
+    color: white;
+}
+
+.applemusic .platform-icon {
+    color: #FC3C44;
+}
+.applemusic:hover .platform-icon {
+    background: #FC3C44;
+    color: white;
+}
+
+
+/* Additional Platform Colors */
+.youtube .platform-icon {
+    color: #FF0000;
+}
+.youtube:hover .platform-icon {
+    background: #FF0000;
+    color: white;
+}
+
+.roblox .platform-icon {
+    color: #00A2FF;
+}
+.roblox:hover .platform-icon {
+    background: #00A2FF;
+    color: white;
+}
+
+.tlauncher .platform-icon {
+    color: #5bc0de;
+}
+.tlauncher:hover .platform-icon {
+    background: #5bc0de;
+    color: white;
+}
+
+/* Keep all previous social platform styles */
+/* Instagram Platform Color */
+.instagram .platform-icon {
+    color: #E1306C;
+    background: rgba(225, 48, 108, 0.1);
+}
+.instagram:hover .platform-icon {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    color: white;
+}
+
+/* Snapchat Platform Color */
+.snapchat .platform-icon {
+    color: #FFFC00;
+    background: rgba(255, 252, 0, 0.1);
+}
+.snapchat:hover .platform-icon {
+    background: #FFFC00;
+    color: black;
+    animation: snapPulse 0.5s infinite alternate;
+}
+
+@keyframes snapPulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Discord Platform Color */
+.discord .platform-icon {
+    color: #5865F2;
+    background: rgba(88, 101, 242, 0.1);
+}
+.discord:hover .platform-icon {
+    background: #5865F2;
+    color: white;
+}
+
+/* GitHub Platform Color */
+.github .platform-icon {
+    color: #181717;
+    background: rgba(24, 23, 23, 0.1);
+}
+.github:hover .platform-icon {
+    background: #181717;
+    color: white;
+}
+/* Footer Styles */
+.footer {
+    background: rgba(255, 255, 255, 0.05); /* Very light transparent white */
+    backdrop-filter: blur(10px); /* Creates a frosted glass effect */
+    border: 1px solid rgba(177, 156, 217, 0.1); /* Subtle border */
+    color: #f0f0f0;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.footer-contact,
+.footer-credits {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-contact h4,
+.footer-credits h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(177, 156, 217, 0.3); /* Lighter border */
+    padding-bottom: 4px;
+    color: #b19cd9; /* Purple accent color */
+}
+
+.footer-divider {
+    width: 1px;
+    background-color: rgba(177, 156, 217, 0.2); /* Lighter divider */
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-contact p,
+.footer-credits p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    color: #d0c0e8; /* Light purple text */
+}
+
+.footer-contact a {
+    color: thistle;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #b19cd9;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 15px;
+    }
+    
+    .footer-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-divider {
+        width: 100%;
+        height: 1px;
+        min-height: 1px;
+    }
+}
+/* Updated Footer Styles */
+.footer {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(177, 156, 217, 0.1);
+    color: #f0f0f0;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align all text */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-credits {
+    width: 100%;
+}
+
+.footer-credits h4 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(177, 156, 217, 0.3);
+    padding-bottom: 8px;
+    color: #b19cd9;
+    display: inline-block;
+}
+
+.footer-credits p {
+    margin: 12px 0;
+    font-size: 0.95rem;
+    color: #d0c0e8;
+}
+
+/* Remove the divider and contact styles as they're no longer needed */
+.footer-divider {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 15px;
+    }
+}
